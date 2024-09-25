@@ -2,15 +2,14 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 12pt;
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: rgb(15, 116, 217); /* Light blue background */
     color: #333333; /* Dark grey text */
     margin: 15pt; /* Margin greater than 10pt on all sides */
 }
 
-/* Heading tags styling */
 h1 {
-    font-size: 24pt;
-    color: #2e8b57; /* Dark green */
+    font-size: 25pt;
+    color: #67ffa9; 
     font-weight: bold;
 }
 
