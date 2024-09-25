@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 12pt;
     background-color: rgb(183, 243, 245); 
+    color: #285479;
     margin: 15pt; /* Margin greater than 10pt on all sides */
 }
 
