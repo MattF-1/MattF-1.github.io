@@ -1,15 +1,13 @@
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
     font-size: 12pt;
-    background-color: rgb(15, 116, 217); 
-    color: #a22a2a; /* Dark red text */
+    background-color: rgb(15, 217, 55); 
     margin: 15pt; /* Margin greater than 10pt on all sides */
 }
 
 h1 {
     font-size: 25pt;
-    color: #a22a2a; 
+    color: #393939; /* Dark red text */; 
     font-weight: bold;
 }
 
