@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 12pt;
-    background-color: rgb(15, 116, 217); /* Light blue background */
-    color: #333333; /* Dark grey text */
+    background-color: rgb(15, 217, 55)
+    color: #a22a2a; /* Dark red text */
     margin: 15pt; /* Margin greater than 10pt on all sides */
 }
 
