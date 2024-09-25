@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 12pt;
-    background-color: rgb(181, 202, 248); 
+    background-color: rgb(183, 243, 245); 
     margin: 15pt; /* Margin greater than 10pt on all sides */
 }
 
 h1 {
     font-size: 25pt;
-    color: #7f7f7f; 
+    color: rgb(90, 57, 57); 
     font-weight: bold;
 }
 
 h2 {
     font-size: 20pt;
-    color: #707070; /* Steel blue */
+    color: #285479; /* Steel blue */
 }
 
 h3 {
@@ -24,7 +24,7 @@ h3 {
 /* Paragraph tags styling */
 p {
     font-size: 12pt;
-    color: #4b4b4b; /* Dark grey */
+    color: #2c516c; /* Dark grey */
 }
 
 /* Anchor tags styling */
