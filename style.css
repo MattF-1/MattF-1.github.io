@@ -43,7 +43,6 @@ a:active {
     color: #ff4500; /* Orange-red color when active */
 }
 
-/* CSS Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -63,11 +62,6 @@ th, td {
     margin-bottom: 20px;
 }
 
-.links-wrapper {
-    padding: 10px;
-    background-color: #eef;
-    border: 1px solid #bbb;
-}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
