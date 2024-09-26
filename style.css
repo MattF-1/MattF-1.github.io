@@ -1,9 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 12pt;
-    background-color: rgb(183, 243, 245); 
+    background-color: rgb(255, 206, 188); 
     color: #285479;
-    margin: 15pt; /* Margin greater than 10pt on all sides */
+    margin: 15pt; 
 }
 
 h1 {
@@ -14,21 +14,18 @@ h1 {
 
 h2 {
     font-size: 20pt;
-    color: #285479; /* Steel blue */
+    color: #285479; 
 }
 
-h3 {
-    font-size: 16pt;
-    color: #6a5acd; /* Slate blue */
-}
-
-/* Paragraph tags styling */
 p {
     font-size: 12pt;
-    color: #2c516c; /* Dark grey */
+    color: #2c516c; 
+}
+li {
+    font-size: 12pt;
+    color: #862277; 
 }
 
-/* Anchor tags styling */
 a {
     text-decoration: none;
     color: #008b8b; /* Dark cyan for non-visited and visited links */
@@ -53,24 +50,4 @@ th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
-}
-
-/* Div around text and links */
-.text-wrapper {
-    padding: 15px;
-    background-color: #f5f5f5; /* Light grey background */
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-}
-
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    body {
-        margin: 5pt;
-    }
-    
-    table {
-        width: 100%;
-    }
 }
