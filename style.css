@@ -37,16 +37,6 @@ h1 {
     font-weight: bold;
 }
 
-myImage {
-    width: 50px;
-    height: auto;
-    cursor: pointer;
-}
-myImage.enlarged {
-    width: 100px;
-    height: auto;
-}
-
 h2 {
     font-size: 20pt;
     color: #285479; 

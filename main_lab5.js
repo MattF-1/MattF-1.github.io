@@ -27,14 +27,15 @@ function myFunction() {
   }
 
   function enlargeImage() {
-    {
-      document.getElementById("myImage").classList.toggle("show");
-      }
-      const img = document.getElementById('myImage');
-      if (img.classList.contains('enlarged')) {
-          img.classList.remove('enlarged');
-      } else {
-          img.classList.add('enlarged');
-      }
+     var img = document.getElementById("myimage")
+     if (img.classList.contains("enlarged")) {
+      img.classList.remove("enlarged");
+      img.style.width = "100";
+     }
+     else {
+      img.classList.add("enlarged");
+      img.style.width = "200px";
+     }
+
     }
   
