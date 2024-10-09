@@ -6,19 +6,19 @@ body {
     margin: 15pt; 
 }
 nav{
-    background-color: #f79F79;
+    background-color: #000000;
     position: absolute;
     width: 150px;
-    height: 100%;
+    height: 95%;
     }
     nav a{
     padding: 15px;
     display: block;
     font-size: 25pt;
-    color: #58355E;
+    color: #ffffff;
     }
     nav a:hover{
-    color: #f1f1f1;
+    color: #d10f0f;
     }
 h1 {
     font-size: 25pt;
