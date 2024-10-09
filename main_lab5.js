@@ -30,11 +30,11 @@ function myFunction() {
      var img = document.getElementById("myimage")
      if (img.classList.contains("enlarged")) {
       img.classList.remove("enlarged");
-      img.style.width = "100";
+      img.style.width = "200";
      }
      else {
       img.classList.add("enlarged");
-      img.style.width = "200px";
+      img.style.width = "100px";
      }
 
     }
