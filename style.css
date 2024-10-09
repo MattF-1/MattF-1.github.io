@@ -5,21 +5,32 @@ body {
     color: #285479;
     margin: 15pt; 
 }
-nav{
-    background-color: #000000;
+/* Dropdown Button */
+.dropbtn {
+    font-size: 20px;
+    }
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+    position: relative;
+    float: right;
+    display: inline-block;
+    }
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+    display: none;
     position: absolute;
-    width: 1500px;
-    height: 100%;
+    background-color: #f9f9f9;
+    min-width: 200px;
     }
-    nav a{
-    padding: 15px;
-    display: block;
-    font-size: 25pt;
-    color: #6117c9;
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    display: block; /*block display allows vertical item alignment*/
     }
-    nav a:hover{
-    color: #ffffff;
-    }
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks
+    on the dropdown button) */
+    .show {display:block;}
 h1 {
     font-size: 25pt;
     color: rgb(90, 57, 57); 
