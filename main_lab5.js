@@ -15,8 +15,13 @@ function myFunction() {
     }
 
     function getUserName() {
+      {
+        document.getElementById("nameDisplay").classList.toggle("show");
+        }
       let userName = prompt("Please enter your name:");
+      window.onclick = function(event) {
       if (userName) {
           document.getElementById("nameDisplay").innerHTML = "Hello, " + userName + "!";
       }
+    }
   }
