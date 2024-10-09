@@ -5,7 +5,21 @@ body {
     color: #285479;
     margin: 15pt; 
 }
-
+nav{
+    background-color: #f79F79;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    }
+    nav a{
+    padding: 15px;
+    display: block;
+    font-size: 25pt;
+    color: #58355E;
+    }
+    nav a:hover{
+    color: #f1f1f1;
+    }
 h1 {
     font-size: 25pt;
     color: rgb(90, 57, 57); 
@@ -73,20 +87,6 @@ th, td {
     }
     body,html{height:100%;}
 
-nav{
-background-color: #f79F79;
-position: absolute;
-width: 150px;
-height: 100%;
-}
-nav a{
-padding: 15px;
-display: block;
-font-size: 25pt;
-color: #58355E;
-}
-nav a:hover{
-color: #f1f1f1;
-}
+
 
 }
