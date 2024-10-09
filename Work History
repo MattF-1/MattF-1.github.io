@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Fernandes Portfolio</title>
+    <link rel ="stylesheet" href="style.css">
+    <script src="main_lab5.js"></script>
+</head>
+
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+    
+    <a href="https://www.netsuite.com/portal/home.shtml">Oracle Netsuite</a>
+    <a href="https://www.tdsynnex.com/na/us/">Tech Data Synnex"</a>
+    <a href="https://www.airliquide.ca/">Air Liquide</a>
+    <a href="https://www.linkedin.com/in/matthew-fernandes-b4458524a">LinkedIn</a>
+
+    </div>
+</div>
+<h2> Work Experience </h2>
+    <ul>
+        <li> Billing Administrator - Air Liquide (2022- 2022) </li>
+        <li> Functional Support Analyst - Oracle Netsuite (2023 - 2023) </li>
+        <li> Tech Sales - Tech Data Synnex (2023- 2023) </li>
+    </ul>
+    <hr/>
+    <h2> Media </h2>
+    <div>
+        <table>
+            <tr>
+                <td><a href="https://www.linkedin.com/in/matthew-fernandes-b4458524a"> Matthew Fernandes Linkedln</td>
+                <td>This link takes you to my LinkedIn page</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.youtube.com/">YouTube</a></td>
+                <td>This link takes you to a past webpage I made  </td>
+            </tr>
+        </table>
+    </div>
