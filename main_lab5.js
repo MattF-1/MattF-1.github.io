@@ -25,3 +25,16 @@ function myFunction() {
       }
     }
   }
+
+  function enlargeImage() {
+    {
+      document.getElementById("myImage").classList.toggle("show");
+      }
+      const img = document.getElementById('myImage');
+      if (img.classList.contains('enlarged')) {
+          img.classList.remove('enlarged');
+      } else {
+          img.classList.add('enlarged');
+      }
+    }
+  
