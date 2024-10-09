@@ -1,7 +1,7 @@
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
   }
-  
+
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -13,3 +13,10 @@ function myFunction() {
     }
     }
     }
+
+    function getUserName() {
+      let userName = prompt("Please enter your name:");
+      if (userName) {
+          document.getElementById("nameDisplay").innerHTML = "Hello, " + userName + "!";
+      }
+  }
