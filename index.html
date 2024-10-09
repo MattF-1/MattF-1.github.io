@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,30 @@
     <title>Matthew Fernandes Portfolio</title>
     <link rel ="stylesheet" href="style.css">
 </head>
+<div id="container">
+<nav>
+        <a href="https://www.linkedin.com/in/matthew-fernandes-b4458524a">LinkedIn</a> |
+        <a href="https://www.netsuite.com/portal/home.shtml">Oracle Netsuite</a> |
+        <a href="https://www.tdsynnex.com/na/us/">Tech Data Synnex</a> |
+        <a href="https://www.airliquide.ca/">Air Liquide</a> |
+        </nav>
+    </div>
+
+    <h1>Welcome to My Homepage</h1>
+    
+    <button onclick="getUserName()">Enter Your Name</button>
+    <div id="nameDisplay">
+    </div>
+    
+    <script>
+        function getUserName() {
+            let userName = prompt("Please enter your name:");
+            if (userName) {
+                document.getElementById("nameDisplay").innerHTML = "Hello, " + userName + "!";
+            }
+        }
+    </script>
+
 <body>
     <h1> Matthew Fernandes </h1>
     <p> Thank you for visiting my webpage detailing my Educational background, Job experience and Major courses taken in University</p>
@@ -53,11 +77,6 @@
             </tr>
         </table>
     </div>
-    <nav>
-        <a href="https://www.linkedin.com/in/matthew-fernandes-b4458524a">LinkedIn</a> |
-        <a href="https://www.netsuite.com/portal/home.shtml">Oracle Netsuite</a> |
-        <a href="https://www.tdsynnex.com/na/us/">Tech Data Synnex</a> |
-        <a href="https://www.airliquide.ca/">Air Liquide</a> |
-        </nav>
+
 </body>
 </html>
