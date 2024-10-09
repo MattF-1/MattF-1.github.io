@@ -8,17 +8,17 @@ body {
 nav{
     background-color: #000000;
     position: absolute;
-    width: 150px;
-    height: 95%;
+    width: 1500px;
+    height: 100%;
     }
     nav a{
     padding: 15px;
     display: block;
     font-size: 25pt;
-    color: #ffffff;
+    color: #6117c9;
     }
     nav a:hover{
-    color: #d10f0f;
+    color: #ffffff;
     }
 h1 {
     font-size: 25pt;
