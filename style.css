@@ -36,12 +36,13 @@ h1 {
     color: rgb(90, 57, 57); 
     font-weight: bold;
 }
-#myImage {
+
+myImage {
     width: 150px;
     transition: width 0.3s ease;
     cursor: pointer;
 }
-#myImage.enlarged {
+myImage.enlarged {
     width: 300px;
 }
 
