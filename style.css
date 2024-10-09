@@ -38,13 +38,12 @@ h1 {
 }
 
 myImage {
-    width: 150px;
+    width: 50px;
     height: auto;
-    transition: width 0.3s ease;
     cursor: pointer;
 }
 myImage.enlarged {
-    width: 300px;
+    width: 100px;
     height: auto;
 }
 
