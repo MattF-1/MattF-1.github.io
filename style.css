@@ -9,13 +9,13 @@ body,html{height:100%;}
 nav{
 background-color: #f79F79;
 position: absolute;
-width: 150px;
+width: 50px;
 height: 100%;
 }
 nav a{
 padding: 15px;
 display: block;
-font-size: 25pt;
+font-size: 5pt;
 color: #58355E;
 }
 nav a:hover{
