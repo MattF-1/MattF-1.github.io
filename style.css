@@ -5,6 +5,23 @@ body {
     color: #7248d4;
     margin: 15pt; 
 }
+body,html{height:100%;}
+nav{
+background-color: #f79F79;
+position: absolute;
+width: 150px;
+height: 100%;
+}
+nav a{
+padding: 15px;
+display: block;
+font-size: 25pt;
+color: #58355E;
+}
+nav a:hover{
+color: #f1f1f1;
+}
+
 /* Dropdown Button */
 .dropbtn {
     font-size: 20px;
