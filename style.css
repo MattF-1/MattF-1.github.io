@@ -7,19 +7,16 @@ body {
 }
 
 h1 {
-    font-size: 45pt;
+    font-size: 25pt;
     color: rgb(90, 57, 57); 
     font-weight: bold;
 }
 
 h2 {
-    font-size: 25pt;
+    font-size: 20pt;
     color: #285479; 
 }
-h3 {
-    font-size: 15pt;
-    color: #c405a7; 
-}
+
 
 p {
     font-size: 12pt;
@@ -27,12 +24,13 @@ p {
 }
 li {
     font-size: 12pt;
-    color: #862277; 
+    color: #c405a7; 
 }
+
 
 a {
     text-decoration: none;
-    color: #008b8b; /* Dark cyan for non-visited and visited links */
+    color: #008b8b; 
 }
 
 a:hover {
@@ -54,4 +52,41 @@ th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
+}
+
+.text-wrapper {
+    padding: 15px;
+    background-color: #f5f5f5; 
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 5pt;
+    }
+    
+    table {
+        width: 100%;
+    }
+    body,html{height:100%;}
+
+nav{
+background-color: #f79F79;
+position: absolute;
+width: 150px;
+height: 100%;
+}
+nav a{
+padding: 15px;
+display: block;
+font-size: 25pt;
+color: #58355E;
+}
+nav a:hover{
+color: #f1f1f1;
+}
+
 }
