@@ -4,6 +4,7 @@ window.onload=function(){
     console.log(user.type); // the type of the form element.
     }
 <input type="text" id="myinput" oninput="inputHandler()">
+
 <p id="emptyParagraph">Dynamically change on webpage input without
 prompt</p>
 
