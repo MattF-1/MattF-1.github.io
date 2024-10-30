@@ -50,13 +50,13 @@ color: #f1f1f1;
     .show {display:block;}
 h1 {
     font-size: 25pt;
-    color: rgb(90, 57, 57); 
+    color: rgb(249, 121, 121); 
     font-weight: bold;
 }
 
 h2 {
     font-size: 20pt;
-    color: #285479; 
+    color: #fc6c56; 
 }
 
 
@@ -66,7 +66,7 @@ p {
 }
 li {
     font-size: 12pt;
-    color: #c405a7; 
+    color: #f06b37; 
 }
 
 
