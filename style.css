@@ -164,3 +164,25 @@ footer {
   .footer-content a:hover {
     text-decoration: underline;
   }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    background-color: #575757;
+  }
