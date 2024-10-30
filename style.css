@@ -118,6 +118,24 @@ th, td {
 
 
 }
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #69c6fd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+
+}
+
+
 /* Footer Styling */
 footer {
     background-color: #130254;
