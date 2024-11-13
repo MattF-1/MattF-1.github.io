@@ -53,6 +53,7 @@ function myFunction() {
         const button = document.getElementById('darkModeBtn');
         
         if (body.classList.contains('dark-mode')) {
+            // Switch to light mode
             body.classList.remove('dark-mode');
             button.textContent = '🌙 Dark Mode';
             // Restore previous color theme if it exists
@@ -66,11 +67,12 @@ function myFunction() {
                 document.body.style.color = '#000080';
             }
         } else {
+            // Switch to dark mode - force black background
             body.classList.add('dark-mode');
             button.textContent = '☀️ Light Mode';
-            // Force dark background and light text
-            document.body.style.backgroundColor = '#333';
-            document.body.style.color = '#F5E6C4';
+            // Force black background and light text
+            document.body.style.backgroundColor = '#000000';
+            document.body.style.color = '#FFFFFF';
         }
         
         localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
@@ -159,8 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (darkMode) {
         document.body.classList.add('dark-mode');
         document.getElementById('darkModeBtn').textContent = '☀️ Light Mode';
-        document.body.style.backgroundColor = '#333';
-        document.body.style.color = '#F5E6C4';
+        document.body.style.backgroundColor = '#000000';
+        document.body.style.color = '#FFFFFF';
     } else {
         // If not in dark mode, apply saved color theme
         const savedBg = localStorage.getItem('themeBgColor');
