@@ -22,30 +22,14 @@
 
 
     <form class="contact-form">
-        <div class="form-group">
-            <label for="firstName" class="required-field">First Name</label>
-            <input type="text" id="firstName" name="firstName" required>
-        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-        <div class="form-group">
-            <label for="lastName" class="required-field">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required>
-        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <div class="form-group">
-            <label for="email" class="required-field">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-
-        <div class="form-group">
-            <label for="message" class="required-field">Message</label>
-            <textarea id="message" name="message" required></textarea>
-        </div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
         <div class="button-group">
             <button type="reset" id="resetBtn" class="reset-btn">Reset Form</button>
