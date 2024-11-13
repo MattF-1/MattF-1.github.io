@@ -457,3 +457,43 @@ footer {
 .contact-form button[type="submit"]:hover {
     background-color: #45a049;
 }
+
+/* Reset button styling */
+.reset-btn {
+    background-color: #cc0000;  /* Red color for warning */
+    color: #F5E6C4;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #ff0000;
+}
+
+/* Dark mode reset button */
+.dark-mode .reset-btn {
+    background-color: #8b0000;
+    color: #F5E6C4;
+}
+
+.dark-mode .reset-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Adjust the button layout */
+.contact-form {
+    /* ... existing styles ... */
+}
+
+/* Add this to create a button container */
+.contact-form .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}

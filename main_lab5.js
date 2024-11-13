@@ -54,3 +54,20 @@ function myFunction() {
         const isDarkMode = document.body.classList.contains('dark-mode');
         localStorage.setItem('darkMode', isDarkMode);
     }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const resetBtn = document.getElementById('resetBtn');
+  
+  if (resetBtn) {
+      resetBtn.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent immediate reset
+          
+          const confirmReset = confirm("Are you sure you want to reset the form? All entered data will be lost.");
+          
+          if (confirmReset) {
+              // If user confirms, reset the form
+              document.querySelector('.contact-form').reset();
+          }
+      });
+  }
+});
