@@ -246,15 +246,15 @@ footer {
 
   /* Dark mode navbar */
   .dark-mode .navbar {
-    background-color: #F5E6C4;  /* Darker cream background */
+    background-color: #000000;
   }
 
   .dark-mode .navbar a {
-    color: #333;  /* Dark text */
+    color: #FFFFFF;
   }
 
   .dark-mode .navbar a:hover {
-    background-color: #e6d4ad;  /* Slightly darker hover state */
+    color: #F5E6C4;
   }
 
 /* Light mode selection colors */
@@ -329,8 +329,8 @@ footer {
 
 /* Dark mode footer */
 .dark-mode footer {
-    background-color: #F5E6C4;  /* Darker cream background */
-    color: #333;  /* Dark text */
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 /* Rest of your existing styles remain the same */
@@ -1048,11 +1048,11 @@ h4:hover {
 /* Dark mode button styling */
 .dark-mode .text-size-btn {
     background-color: #F5E6C4;
-    color: #333;
+    color: #000000;
 }
 
 .dark-mode .text-size-btn:hover {
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
 /* Enlarged text classes */

@@ -56,23 +56,14 @@ function myFunction() {
             // Switch to light mode
             body.classList.remove('dark-mode');
             button.textContent = '🌙 Dark Mode';
-            // Restore previous color theme if it exists
-            const savedBg = localStorage.getItem('themeBgColor');
-            const savedText = localStorage.getItem('themeTextColor');
-            if (savedBg && savedText) {
-                document.body.style.backgroundColor = savedBg;
-                document.body.style.color = savedText;
-            } else {
-                document.body.style.backgroundColor = '#F5E6C4';
-                document.body.style.color = '#000080';
-            }
+            document.body.style.backgroundColor = '#F5E6C4';  // Light cream background
+            document.body.style.color = '#000080';  // Dark blue text
         } else {
-            // Switch to dark mode - force black background
+            // Switch to dark mode
             body.classList.add('dark-mode');
             button.textContent = '☀️ Light Mode';
-            // Force black background and light text
-            document.body.style.backgroundColor = '#000000';
-            document.body.style.color = '#FFFFFF';
+            document.body.style.backgroundColor = '#000000';  // Pure black background
+            document.body.style.color = '#FFFFFF';  // White text
         }
         
         localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
