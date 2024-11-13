@@ -86,11 +86,43 @@ li {
 }
 
 #myimage {
-    width: 200px; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio */
-    cursor: pointer; /* Changes the cursor to a pointer for better UX */
-  }
-  
+    max-width: 60%;  /* Increased from 50% */
+    height: auto;
+    border: 8px solid #000080;  /* Dark blue border matching theme */
+    border-radius: 8px;  /* Rounded corners */
+    transition: all 0.3s ease;  /* Smooth transition for dark mode */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);  /* Subtle shadow */
+}
+
+/* Dark mode image styling */
+.dark-mode #myimage {
+    border-color: #F5E6C4;  /* Cream colored border in dark mode */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);  /* Enhanced shadow for dark mode */
+}
+
+/* Hover effect (optional) */
+#myimage:hover {
+    transform: scale(1.02);  /* Slight zoom on hover */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #myimage {
+        max-width: 90%;  /* Larger on mobile */
+        margin: 0 auto;  /* Center on mobile */
+    }
+}
+
+/* Adjust the image-resume-container if needed */
+.image-resume-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;  /* Increased gap */
+    margin: 25px 0;
+    padding: 10px;
+}
+
 a {
     text-decoration: none;
     color: #008b8b; 
