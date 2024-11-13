@@ -1100,3 +1100,115 @@ h4:hover {
         display: none;  /* Hide label on mobile */
     }
 }
+
+/* Updated color picker styling */
+.color-picker-container {
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.color-picker-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #000080;
+    color: #F5E6C4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.color-picker-btn:hover {
+    background-color: #0000b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.palette-icon {
+    font-size: 20px;
+}
+
+.color-picker-panel {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: none;
+    padding: 12px;
+    min-width: 150px;
+}
+
+.color-option {
+    padding: 10px 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.color-option::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid rgba(0,0,0,0.1);
+    background-color: attr(data-color);
+}
+
+.color-option:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+}
+
+/* Dark mode styles */
+.dark-mode .color-picker-btn {
+    background-color: #F5E6C4;
+    color: #333;
+}
+
+.dark-mode .color-picker-btn:hover {
+    background-color: #fff;
+}
+
+.dark-mode .color-picker-panel {
+    background-color: #333;
+    border: 1px solid #F5E6C4;
+}
+
+.dark-mode .color-option {
+    color: #F5E6C4;
+}
+
+.dark-mode .color-option:hover {
+    background-color: #444;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .picker-label {
+        display: none;
+    }
+    
+    .color-picker-btn {
+        padding: 12px;
+    }
+    
+    .color-picker-panel {
+        right: -10px;
+    }
+}
