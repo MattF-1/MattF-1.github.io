@@ -2,7 +2,7 @@ body {
     font-family: Verdana, sans-serif;
     font-size: 12pt;
     background-color: #FFFDD0;  /* Cream color */
-    color: #a76767;
+    color: #000080;    /* Dark blue text */
     margin: 15pt; 
 }
 body,html{height:100%;}
@@ -194,7 +194,7 @@ footer {
 
 .dark-mode {
     background-color: #333;
-    color: #fff;
+    color: #FFFDD0;    /* Cream colored text */
 }
 
 .dark-mode-btn {
