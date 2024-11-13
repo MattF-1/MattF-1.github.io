@@ -86,7 +86,7 @@ li {
 }
 
 #myimage {
-    max-width: 25%;  /* Decreased from 40% */
+    max-width: 20%;  /* Decreased from 25% */
     height: auto;
     border: 8px solid #000080;  /* Dark blue border matching theme */
     border-radius: 8px;  /* Rounded corners */
@@ -109,7 +109,7 @@ li {
 /* Media query for mobile responsiveness */
 @media screen and (max-width: 768px) {
     #myimage {
-        max-width: 50%;  /* Decreased from 70% for mobile */
+        max-width: 10%;  /* Decreased from 50% for mobile */
         margin: 0 auto;
     }
 }
