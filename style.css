@@ -247,3 +247,64 @@ body {
 .dark-mode-btn:hover {
     background-color: #45a049;
 }
+
+/* Add these styles for the body and html to ensure proper sticky footer behavior */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content wrapper */
+body > *:not(footer) {
+    flex: 1 0 auto;
+}
+
+/* Footer styling */
+footer {
+    flex-shrink: 0;  /* Prevents footer from shrinking */
+    background-color: #000080;  /* Dark blue to match navbar */
+    color: #FFFDD0;  /* Cream text */
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);  /* Optional: adds subtle shadow */
+}
+
+/* Footer content styling */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Dark mode footer */
+.dark-mode footer {
+    background-color: #FFFDD0;  /* Cream background */
+    color: #333;  /* Dark text */
+}
+
+/* Rest of your existing styles remain the same */
+.navbar {
+    background-color: #000080;
+    padding: 15px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dark-mode-btn {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
