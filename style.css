@@ -1125,3 +1125,27 @@ h4:hover {
         margin: 0 5px;
     }
 }
+
+/* Remove bullet points and adjust text alignment */
+ul {
+    list-style-type: none;  /* Removes bullet points */
+    padding: 0;  /* Removes default padding */
+    margin: 0;  /* Removes default margin */
+    text-align: center;
+}
+
+li {
+    margin: 10px 0;  /* Adds vertical spacing between items */
+    padding: 0;
+    text-align: center;
+}
+
+/* Specific styling for index page content */
+.index-content ul {
+    max-width: 800px;  /* Optional: keeps text width reasonable */
+    margin: 0 auto;  /* Centers the content block */
+}
+
+.index-content li {
+    line-height: 1.6;  /* Improves readability */
+}
