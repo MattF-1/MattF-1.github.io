@@ -228,27 +228,25 @@ footer {
   }
   
   .navbar {
-    background-color: #000080;  /* Dark blue background */
-    padding: 15px;
-    overflow: hidden;
-    position: sticky;  /* Make navbar sticky */
-    top: 0;           /* Stick to top of viewport */
-    z-index: 1000;    /* Ensure navbar stays on top of other content */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Optional: adds subtle shadow */
     text-align: center;
+    background-color: #000080;
+    padding: 15px 0;  /* Increased padding to accommodate larger text */
   }
 
   .navbar a {
-    color: #F5E6C4;  /* Darker cream text */
-    text-decoration: none;
-    padding: 14px 16px;
-    margin-right: 10px;
     display: inline-block;
+    color: #F5E6C4;
+    text-decoration: none;
+    padding: 10px 25px;  /* Increased padding around text */
+    margin: 0 10px;
+    font-size: 24px;  /* Increased from default size */
+    font-weight: bold;  /* Make text bold */
+    transition: all 0.3s ease;
   }
 
   .navbar a:hover {
-    background-color: #0000b3;  /* Slightly lighter blue on hover */
-    border-radius: 4px;
+    color: #ffffff;
+    transform: translateY(-2px);
   }
 
   /* Dark mode navbar */
@@ -380,6 +378,8 @@ footer {
     background-color: #F5E6C4;
     color: #000080;
     font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Dark mode form styles */
@@ -472,6 +472,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px 0;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -822,6 +825,7 @@ h4:hover {
 /* Education links styling */
 .education-links {
     margin: 20px 0;
+    text-align: center;
 }
 
 .edu-link {
@@ -830,7 +834,7 @@ h4:hover {
     text-decoration: none;
     font-weight: bold;
     padding: 8px 16px;
-    margin: 5px 0;
+    margin: 5px auto;
     border: 2px solid #000080;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -1044,6 +1048,7 @@ h4:hover {
     transition: all 0.3s ease;
     z-index: 1001;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 .text-size-btn:hover {
@@ -1109,5 +1114,14 @@ h4:hover {
     
     .size-label {
         display: none;  /* Hide label on mobile */
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        font-size: 20px;  /* Slightly smaller on mobile but still larger than original */
+        padding: 8px 15px;
+        margin: 0 5px;
     }
 }
