@@ -86,7 +86,7 @@ li {
 }
 
 #myimage {
-    max-width: 20%;  /* Decreased from 25% */
+    max-width: 5%;  /* Decreased from 25% */
     height: auto;
     border: 8px solid #000080;  /* Dark blue border matching theme */
     border-radius: 8px;  /* Rounded corners */
