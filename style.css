@@ -286,20 +286,33 @@ body {
 
 .dark-mode-btn {
     position: fixed;
-    top: 80px;        /* Increased to appear below sticky navbar */
+    top: 150px;
     right: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 12px 20px;
+    background-color: #000080;
+    color: #F5E6C4;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    z-index: 1001;    /* Ensure button stays above navbar */
-    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .dark-mode-btn:hover {
-    background-color: #45a049;
+    background-color: #0000b3;
+    transform: translateY(-2px);
+}
+
+/* Dark mode styles */
+.dark-mode .dark-mode-btn {
+    background-color: #F5E6C4;
+    color: #000000;
+}
+
+.dark-mode .dark-mode-btn:hover {
+    background-color: #FFFFFF;
 }
 
 /* Add these styles for the body and html to ensure proper sticky footer behavior */

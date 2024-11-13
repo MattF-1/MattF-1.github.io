@@ -58,15 +58,15 @@ function myFunction() {
             button.textContent = '🌙 Dark Mode';
             document.body.style.backgroundColor = '#F5E6C4';  // Light cream background
             document.body.style.color = '#000080';  // Dark blue text
+            localStorage.setItem('darkMode', 'false');  // Save preference
         } else {
             // Switch to dark mode
             body.classList.add('dark-mode');
             button.textContent = '☀️ Light Mode';
             document.body.style.backgroundColor = '#000000';  // Pure black background
             document.body.style.color = '#FFFFFF';  // White text
+            localStorage.setItem('darkMode', 'true');  // Save preference
         }
-        
-        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
     }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -153,4 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
             '<span class="size-icon">Aa</span>Reset Text Size';
     }
 });
-
+<button id="darkModeBtn" class="dark-mode-btn" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+</button>
