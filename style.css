@@ -1120,3 +1120,101 @@ li {
 .index-content li {
     line-height: 1.6;  /* Improves readability */
 }
+
+/* Work experience link styling */
+.work-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.work-link {
+    display: inline-block;
+    color: #000080;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 10px;
+    border: 2px solid #000080;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;  /* For tooltip positioning */
+    font-size: 18px;
+}
+
+.work-link:hover {
+    background-color: #000080;
+    color: #F5E6C4;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Tooltip styles */
+.work-link::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: #333;
+    color: #F5E6C4;
+    font-size: 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    z-index: 1000;
+}
+
+/* Tooltip arrow */
+.work-link::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.work-link:hover::before,
+.work-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dark mode styles */
+.dark-mode .work-link {
+    color: #F5E6C4;
+    border-color: #F5E6C4;
+}
+
+.dark-mode .work-link:hover {
+    background-color: #F5E6C4;
+    color: #000000;
+}
+
+.dark-mode .work-link::before {
+    background-color: #F5E6C4;
+    color: #000000;
+}
+
+.dark-mode .work-link::after {
+    border-top-color: #F5E6C4;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .work-link {
+        display: block;
+        margin: 15px auto;
+        max-width: 80%;
+        font-size: 16px;
+    }
+}
