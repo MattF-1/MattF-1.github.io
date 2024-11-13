@@ -602,8 +602,10 @@ h4:hover {
 }
 
 .resume-button-container {
-    text-align: center;
-    margin: 20px 0;
+    position: absolute;
+    right: 20px;  /* Distance from right edge */
+    margin-top: -100px;  /* Adjust this value to position above footer */
+    padding: 20px;
 }
 
 .resume-btn {
@@ -639,4 +641,14 @@ h4:hover {
 
 .dark-mode .resume-btn:hover {
     background-color: #fff;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .resume-button-container {
+        position: static;
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px;
+    }
 }
