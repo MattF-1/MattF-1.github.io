@@ -112,3 +112,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Add these functions to your existing JavaScript
+function toggleColorPicker() {
+    const panel = document.getElementById('colorPanel');
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+}
+
+function setThemeColor(bgColor, textColor) {
+    // Save colors to localStorage
+    localStorage.setItem('themeBgColor', bgColor);
+    localStorage.setItem('themeTextColor', textColor);
+    
+    // Apply colors
+    document.body.style.backgroundColor = bgColor;
+    document.body.style.color = textColor;
+}
+
+// Add color picker functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Set up color options
+    const colorOptions = document.querySelectorAll('.color-option');
+    colorOptions.forEach(option => {
+        // Set background color preview
+        option.style.backgroundColor = option.dataset.color;
+        
+        // Add click handler
+        option.addEventListener('click', () => {
+            setThemeColor(option.dataset.color, option.dataset.text);
+            toggleColorPicker();
+        });
+    });
+
+    // Load saved colors
+    const savedBg = localStorage.getItem('themeBgColor');
+    const savedText = localStorage.getItem('themeTextColor');
+    if (savedBg && savedText) {
+        document.body.style.backgroundColor = savedBg;
+        document.body.style.color = savedText;
+    }
+
+    // Close panel when clicking outside
+    document.addEventListener('click', function(e) {
+        const panel = document.getElementById('colorPanel');
+        const btn = document.querySelector('.color-picker-btn');
+        if (!panel.contains(e.target) && !btn.contains(e.target)) {
+            panel.style.display = 'none';
+        }
+    });
+});
