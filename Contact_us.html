@@ -28,6 +28,13 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
+        <label for="availability">Availability (Hold Ctrl/Cmd to select multiple):</label>
+        <select id="availability" name="availability" multiple required>
+            <option value="morning">Morning (9AM - 12PM)</option>
+            <option value="afternoon">Afternoon (12PM - 5PM)</option>
+            <option value="evening">Evening (5PM - 9PM)</option>
+        </select>
+
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
 
