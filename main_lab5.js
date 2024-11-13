@@ -89,3 +89,26 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.getElementById('phone');
+    
+    if (phoneInput) {
+        phoneInput.addEventListener('input', e => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length) {
+                value = value.length <= 3 ? value :
+                        value.length <= 6 ? `${value.slice(0,3)}-${value.slice(3)}` :
+                        `${value.slice(0,3)}-${value.slice(3,6)}-${value.slice(6,10)}`;
+            }
+            e.target.value = value;
+        });
+
+        phoneInput.addEventListener('blur', e => {
+            if (e.target.value && !/^\d{3}-\d{3}-\d{4}$/.test(e.target.value)) {
+                alert("Please enter a valid phone number in the format: 123-456-7890");
+                e.target.focus();
+            }
+        });
+    }
+});

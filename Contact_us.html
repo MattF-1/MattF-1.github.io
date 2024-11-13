@@ -23,20 +23,29 @@
 
     <form class="contact-form">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" required>
 
-        <label for="availability">Availability (Hold Ctrl/Cmd to select multiple):</label>
-        <select id="availability" name="availability" multiple required>
-            <option value="morning">Morning (9AM - 12PM)</option>
-            <option value="afternoon">Afternoon (12PM - 5PM)</option>
-            <option value="evening">Evening (5PM - 9PM)</option>
-        </select>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        <span class="phone-format">Format: 123-456-7890</span>
+
+        <label>Preferred Contact Method:</label>
+        <div class="contact-preference">
+            <input type="radio" id="email-pref" name="contact-preference" value="email" required>
+            <label for="email-pref">Email</label>
+
+            <input type="radio" id="phone-pref" name="contact-preference" value="phone">
+            <label for="phone-pref">Cell Phone</label>
+
+            <input type="radio" id="both-pref" name="contact-preference" value="both">
+            <label for="both-pref">Both</label>
+        </div>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" required></textarea>
 
         <div class="button-group">
             <button type="reset" id="resetBtn" class="reset-btn">Reset Form</button>
