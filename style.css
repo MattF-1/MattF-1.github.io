@@ -306,3 +306,71 @@ footer {
     cursor: pointer;
     z-index: 1001;
 }
+
+/* Form styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 3px solid #000080;  /* Wider dark blue border */
+    border-radius: 6px;
+    background-color: #F5E6C4;  /* Cream background */
+    color: #000080;  /* Dark blue text */
+    font-size: 16px;
+}
+
+.contact-form label {
+    color: #000080;  /* Dark blue text */
+    font-weight: bold;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #000080;
+    color: #F5E6C4;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #0000b3;  /* Slightly lighter blue */
+}
+
+/* Dark mode form styles */
+.dark-mode .contact-form input[type="text"],
+.dark-mode .contact-form input[type="email"],
+.dark-mode .contact-form textarea {
+    border-color: #F5E6C4;  /* Cream border */
+    background-color: #444;  /* Slightly lighter than dark mode background */
+    color: #F5E6C4;  /* Cream text */
+}
+
+.dark-mode .contact-form label {
+    color: #F5E6C4;  /* Cream text */
+}
+
+.dark-mode .contact-form button[type="submit"] {
+    background-color: #F5E6C4;
+    color: #333;
+}
+
+.dark-mode .contact-form button[type="submit"]:hover {
+    background-color: #e6d4ad;  /* Slightly darker cream */
+}
+
+/* Optional: Add focus states for better accessibility */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #000080;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+    box-shadow: 0 0 5px #F5E6C4;
+}
