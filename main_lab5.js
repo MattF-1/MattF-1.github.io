@@ -39,6 +39,18 @@ function myFunction() {
 
     }
   
+    // Check for dark mode preference when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+        }
+    });
+
+    // Update toggle function to save preference
     function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-  }
+        document.body.classList.toggle('dark-mode');
+        // Save the preference
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode);
+    }
