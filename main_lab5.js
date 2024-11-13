@@ -49,10 +49,31 @@ function myFunction() {
 
     // Update toggle function to save preference
     function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-        // Save the preference
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode);
+        const body = document.body;
+        const button = document.getElementById('darkModeBtn');
+        
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            button.textContent = '🌙 Dark Mode';
+            // Restore previous color theme if it exists
+            const savedBg = localStorage.getItem('themeBgColor');
+            const savedText = localStorage.getItem('themeTextColor');
+            if (savedBg && savedText) {
+                document.body.style.backgroundColor = savedBg;
+                document.body.style.color = savedText;
+            } else {
+                document.body.style.backgroundColor = '#F5E6C4';
+                document.body.style.color = '#000080';
+            }
+        } else {
+            body.classList.add('dark-mode');
+            button.textContent = '☀️ Light Mode';
+            // Force dark background and light text
+            document.body.style.backgroundColor = '#333';
+            document.body.style.color = '#F5E6C4';
+        }
+        
+        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
     }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -120,37 +141,45 @@ function toggleColorPicker() {
 }
 
 function setThemeColor(bgColor, textColor) {
-    // Save colors to localStorage
+    // Only apply color theme if not in dark mode
+    if (!document.body.classList.contains('dark-mode')) {
+        document.body.style.backgroundColor = bgColor;
+        document.body.style.color = textColor;
+    }
+    
+    // Save colors to localStorage for when dark mode is toggled off
     localStorage.setItem('themeBgColor', bgColor);
     localStorage.setItem('themeTextColor', textColor);
-    
-    // Apply colors
-    document.body.style.backgroundColor = bgColor;
-    document.body.style.color = textColor;
 }
 
 // Add color picker functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Check dark mode first
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    if (darkMode) {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkModeBtn').textContent = '☀️ Light Mode';
+        document.body.style.backgroundColor = '#333';
+        document.body.style.color = '#F5E6C4';
+    } else {
+        // If not in dark mode, apply saved color theme
+        const savedBg = localStorage.getItem('themeBgColor');
+        const savedText = localStorage.getItem('themeTextColor');
+        if (savedBg && savedText) {
+            document.body.style.backgroundColor = savedBg;
+            document.body.style.color = savedText;
+        }
+    }
+    
     // Set up color options
     const colorOptions = document.querySelectorAll('.color-option');
     colorOptions.forEach(option => {
-        // Set background color preview
         option.style.backgroundColor = option.dataset.color;
-        
-        // Add click handler
         option.addEventListener('click', () => {
             setThemeColor(option.dataset.color, option.dataset.text);
             toggleColorPicker();
         });
     });
-
-    // Load saved colors
-    const savedBg = localStorage.getItem('themeBgColor');
-    const savedText = localStorage.getItem('themeTextColor');
-    if (savedBg && savedText) {
-        document.body.style.backgroundColor = savedBg;
-        document.body.style.color = savedText;
-    }
 
     // Close panel when clicking outside
     document.addEventListener('click', function(e) {
