@@ -877,3 +877,101 @@ h4:hover {
         text-align: center;
     }
 }
+
+/* Program button styling */
+.program-link-container {
+    margin: 20px 0;
+}
+
+.program-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 32px;
+    background-color: #004C9B;  /* TMU Blue */
+    color: #F5E6C4;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.arrow-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.program-btn:hover {
+    background-color: #003D7A;  /* Darker TMU Blue */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+.program-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Dark mode styles */
+.dark-mode .program-btn {
+    background-color: #F5E6C4;
+    color: #333;
+}
+
+.dark-mode .program-btn:hover {
+    background-color: #fff;
+}
+
+/* Tooltip styles (reusing from previous tooltips) */
+.program-btn {
+    position: relative;
+}
+
+.program-btn::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: #333;
+    color: #F5E6C4;
+    font-size: 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    z-index: 1000;
+}
+
+.program-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.program-btn:hover::before,
+.program-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dark mode tooltip */
+.dark-mode .program-btn::before {
+    background-color: #F5E6C4;
+    color: #333;
+}
+
+.dark-mode .program-btn::after {
+    border-top-color: #F5E6C4;
+}
