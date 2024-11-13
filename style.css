@@ -1,8 +1,41 @@
+body, p {
+    background-color: #FFFDD0;  /* Cream color */
+    color: #000080;    /* Dark blue text */
+}
+
+.dark-mode, 
+.dark-mode p {
+    background-color: #333;
+    color: #FFFDD0;    /* Cream colored text */
+}
+
+/* Specific styling for paragraphs if needed */
+p {
+    line-height: 1.6;  /* Improves readability */
+    margin-bottom: 1em;
+}
+
+.dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode-btn:hover {
+    background-color: #45a049;
+}
+
 body {
     font-family: Verdana, sans-serif;
     font-size: 12pt;
-    background-color: #FFFDD0;  /* Cream color */
-    color: #000080;    /* Dark blue text */
+    background-color: rgb(48, 47, 47); 
+    color: #a76767;
     margin: 15pt; 
 }
 body,html{height:100%;}
@@ -191,24 +224,3 @@ footer {
   .navbar a:hover {
     background-color: #575757;
   }
-
-.dark-mode {
-    background-color: #333;
-    color: #FFFDD0;    /* Cream colored text */
-}
-
-.dark-mode-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.dark-mode-btn:hover {
-    background-color: #45a049;
-}
