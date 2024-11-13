@@ -67,6 +67,9 @@ function myFunction() {
             document.body.style.color = '#FFFFFF';  // White text
             localStorage.setItem('darkMode', 'true');  // Save preference
         }
+        <button id="darkModeBtn" class="dark-mode-btn" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+</button>
     }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -153,6 +156,4 @@ document.addEventListener('DOMContentLoaded', function() {
             '<span class="size-icon">Aa</span>Reset Text Size';
     }
 });
-<button id="darkModeBtn" class="dark-mode-btn" onclick="toggleDarkMode()">
-    🌙 Dark Mode
-</button>
+
