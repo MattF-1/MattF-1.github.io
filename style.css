@@ -611,17 +611,17 @@ h4:hover {
 .resume-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
+    gap: 15px;  /* Increased from 10px */
+    padding: 16px 32px;  /* Increased from 12px 24px */
     background-color: #000080;
     color: #F5E6C4;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 8px;  /* Increased from 6px */
+    font-size: 20px;  /* Increased from 16px */
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative;  /* For tooltip positioning */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);  /* Enhanced shadow */
+    white-space: nowrap;
 }
 
 .resume-btn::before {
@@ -675,12 +675,12 @@ h4:hover {
 
 .resume-btn:hover {
     background-color: #0000b3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px);  /* Increased from -2px */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
 .download-icon {
-    font-size: 20px;
+    font-size: 24px;  /* Increased from 20px */
 }
 
 /* Dark mode styles */
@@ -700,6 +700,11 @@ h4:hover {
         text-align: center;
         margin: 20px auto;
         padding: 10px;
+    }
+
+    .resume-btn {
+        padding: 14px 28px;  /* Slightly smaller on mobile */
+        font-size: 18px;
     }
 }
 
