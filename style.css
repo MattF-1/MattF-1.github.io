@@ -86,7 +86,7 @@ li {
 }
 
 #myimage {
-    max-width: 60%;  /* Increased from 50% */
+    max-width: 40%;  /* Decreased from 60% */
     height: auto;
     border: 8px solid #000080;  /* Dark blue border matching theme */
     border-radius: 8px;  /* Rounded corners */
@@ -109,8 +109,8 @@ li {
 /* Media query for mobile responsiveness */
 @media screen and (max-width: 768px) {
     #myimage {
-        max-width: 90%;  /* Larger on mobile */
-        margin: 0 auto;  /* Center on mobile */
+        max-width: 70%;  /* Decreased from 90% for mobile */
+        margin: 0 auto;
     }
 }
 
@@ -118,8 +118,8 @@ li {
 .image-resume-container {
     display: flex;
     align-items: flex-start;
-    gap: 25px;  /* Increased gap */
-    margin: 25px 0;
+    gap: 20px;
+    margin: 20px 0;
     padding: 10px;
 }
 
@@ -746,6 +746,7 @@ h4:hover {
     align-items: flex-start;
     gap: 20px;
     margin: 20px 0;
+    padding: 10px;
 }
 
 #myimage {
