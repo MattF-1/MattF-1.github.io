@@ -1015,62 +1015,88 @@ h4:hover {
     border-top-color: #F5E6C4;
 }
 
-/* Color picker styling */
-.color-picker-container {
+/* Text size button styling */
+.text-size-btn {
     position: fixed;
-    top: 140px;  /* Position below dark mode button */
+    top: 200px;  /* Position below other buttons */
     right: 20px;
-    z-index: 1001;
-}
-
-.color-picker-btn {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #000080;
+    color: #F5E6C4;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: all 0.3s ease;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.color-picker-btn:hover {
-    background-color: #45a049;
+.text-size-btn:hover {
+    background-color: #0000b3;
+    transform: translateY(-2px);
 }
 
-.color-picker-panel {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin-top: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    display: none;
-    padding: 10px;
+.size-icon {
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.color-option {
-    padding: 8px 16px;
-    margin: 5px 0;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+/* Dark mode button styling */
+.dark-mode .text-size-btn {
+    background-color: #F5E6C4;
+    color: #333;
 }
 
-.color-option:hover {
-    background-color: #f0f0f0;
+.dark-mode .text-size-btn:hover {
+    background-color: #fff;
 }
 
-/* Dark mode adjustments */
-.dark-mode .color-picker-panel {
-    background-color: #333;
+/* Enlarged text classes */
+.enlarged-text {
+    --scale-factor: 1.2;
 }
 
-.dark-mode .color-option {
-    color: #F5E6C4;
+.enlarged-text p {
+    font-size: calc(1em * var(--scale-factor));
 }
 
-.dark-mode .color-option:hover {
-    background-color: #444;
+.enlarged-text h1 {
+    font-size: calc(2.5em * var(--scale-factor));
+}
+
+.enlarged-text h2 {
+    font-size: calc(2em * var(--scale-factor));
+}
+
+.enlarged-text h3 {
+    font-size: calc(1.75em * var(--scale-factor));
+}
+
+.enlarged-text h4 {
+    font-size: calc(1.5em * var(--scale-factor));
+}
+
+.enlarged-text li {
+    font-size: calc(1em * var(--scale-factor));
+}
+
+.enlarged-text .navbar a {
+    font-size: calc(1em * var(--scale-factor));
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+    .text-size-btn {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .size-label {
+        display: none;  /* Hide label on mobile */
+    }
 }

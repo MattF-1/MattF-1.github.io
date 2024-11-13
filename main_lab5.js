@@ -161,3 +161,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Add to your existing JavaScript
+function toggleTextSize() {
+    const body = document.body;
+    const button = document.getElementById('textSizeBtn');
+    const label = button.querySelector('.size-label');
+    
+    if (body.classList.contains('enlarged-text')) {
+        body.classList.remove('enlarged-text');
+        label.textContent = 'Increase Text Size';
+        localStorage.setItem('textEnlarged', 'false');
+    } else {
+        body.classList.add('enlarged-text');
+        label.textContent = 'Reset Text Size';
+        localStorage.setItem('textEnlarged', 'true');
+    }
+}
+
+// Add this to your DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    
+    // Check for saved text size preference
+    const textEnlarged = localStorage.getItem('textEnlarged') === 'true';
+    if (textEnlarged) {
+        document.body.classList.add('enlarged-text');
+        document.querySelector('.size-label').textContent = 'Reset Text Size';
+    }
+});
