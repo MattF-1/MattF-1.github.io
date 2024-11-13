@@ -127,3 +127,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function toggleFontSize() {
+    const body = document.body;
+    const button = document.getElementById('fontSizeBtn');
+    
+    if (body.classList.contains('large-text')) {
+        // Reset to normal size
+        body.classList.remove('large-text');
+        button.innerHTML = '<span class="size-icon">Aa</span>Increase Text Size';
+        localStorage.setItem('largeText', 'false');
+    } else {
+        // Increase text size
+        body.classList.add('large-text');
+        button.innerHTML = '<span class="size-icon">Aa</span>Reset Text Size';
+        localStorage.setItem('largeText', 'true');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for saved text size preference
+    const largeText = localStorage.getItem('largeText') === 'true';
+    if (largeText) {
+        document.body.classList.add('large-text');
+        document.getElementById('fontSizeBtn').innerHTML = 
+            '<span class="size-icon">Aa</span>Reset Text Size';
+    }
+});
+

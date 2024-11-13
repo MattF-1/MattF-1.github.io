@@ -1030,99 +1030,70 @@ h4:hover {
     border-top-color: #F5E6C4;
 }
 
-/* Text size button styling */
-.text-size-btn {
+/* Font size button styling */
+.font-size-btn {
     position: fixed;
-    top: 200px;  /* Position below other buttons */
+    top: 200px;  /* Position below dark mode button */
     right: 20px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #000080;
     color: #F5E6C4;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s ease;
-    z-index: 1001;
+    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    text-align: center;
 }
 
-.text-size-btn:hover {
+.font-size-btn:hover {
     background-color: #0000b3;
     transform: translateY(-2px);
 }
 
 .size-icon {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* Dark mode button styling */
-.dark-mode .text-size-btn {
+.dark-mode .font-size-btn {
     background-color: #F5E6C4;
     color: #000000;
 }
 
-.dark-mode .text-size-btn:hover {
+.dark-mode .font-size-btn:hover {
     background-color: #FFFFFF;
 }
 
-/* Enlarged text classes */
-.enlarged-text {
-    --scale-factor: 1.2;
+/* Enlarged text styles */
+.large-text {
+    --scale: 1.2;  /* 20% increase */
 }
 
-.enlarged-text p {
-    font-size: calc(1em * var(--scale-factor));
+.large-text * {
+    font-size: calc(var(--original-size, 1rem) * var(--scale)) !important;
 }
 
-.enlarged-text h1 {
-    font-size: calc(2.5em * var(--scale-factor));
-}
-
-.enlarged-text h2 {
-    font-size: calc(2em * var(--scale-factor));
-}
-
-.enlarged-text h3 {
-    font-size: calc(1.75em * var(--scale-factor));
-}
-
-.enlarged-text h4 {
-    font-size: calc(1.5em * var(--scale-factor));
-}
-
-.enlarged-text li {
-    font-size: calc(1em * var(--scale-factor));
-}
-
-.enlarged-text .navbar a {
-    font-size: calc(1em * var(--scale-factor));
-}
-
-/* Media query for mobile */
-@media screen and (max-width: 768px) {
-    .text-size-btn {
-        top: auto;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .size-label {
-        display: none;  /* Hide label on mobile */
-    }
-}
+.large-text h1 { --original-size: 2.5rem; }
+.large-text h2 { --original-size: 2rem; }
+.large-text h3 { --original-size: 1.75rem; }
+.large-text p, .large-text li { --original-size: 1rem; }
+.large-text .navbar a { --original-size: 24px; }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    .navbar a {
-        font-size: 20px;  /* Slightly smaller on mobile but still larger than original */
-        padding: 8px 15px;
-        margin: 0 5px;
+    .font-size-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .size-icon {
+        font-size: 16px;
     }
 }
 
