@@ -178,6 +178,10 @@ footer {
     background-color: #000080;  /* Dark blue background */
     padding: 15px;
     overflow: hidden;
+    position: sticky;  /* Make navbar sticky */
+    top: 0;           /* Stick to top of viewport */
+    z-index: 1000;    /* Ensure navbar stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Optional: adds subtle shadow */
   }
 
   .navbar a {
@@ -229,7 +233,7 @@ body {
 
 .dark-mode-btn {
     position: fixed;
-    top: 20px;
+    top: 80px;        /* Increased to appear below sticky navbar */
     right: 20px;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -237,6 +241,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 1001;    /* Ensure button stays above navbar */
 }
 
 .dark-mode-btn:hover {
