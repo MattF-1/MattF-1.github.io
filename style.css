@@ -175,21 +175,34 @@ footer {
   }
   
   .navbar {
-    background-color: #333;
+    background-color: #000080;  /* Dark blue background */
+    padding: 15px;
     overflow: hidden;
   }
 
   .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+    color: #FFFDD0;  /* Cream colored text */
     text-decoration: none;
+    padding: 14px 16px;
+    margin-right: 10px;
   }
 
   .navbar a:hover {
-    background-color: #575757;
+    background-color: #0000b3;  /* Slightly lighter blue on hover */
+    border-radius: 4px;
+  }
+
+  /* Dark mode navbar */
+  .dark-mode .navbar {
+    background-color: #FFFDD0;  /* Cream background */
+  }
+
+  .dark-mode .navbar a {
+    color: #333;  /* Dark text */
+  }
+
+  .dark-mode .navbar a:hover {
+    background-color: #fff5d4;  /* Slightly lighter cream on hover */
   }
 
 /* Light mode selection colors */
