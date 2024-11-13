@@ -399,3 +399,41 @@ footer {
 .dark-mode .submit-btn:hover {
     background-color: #3cb371;
 }
+
+/* Add these to your existing form styles */
+.contact-form select[multiple] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 3px solid #000080;
+    border-radius: 6px;
+    background-color: #F5E6C4;
+    color: #000080;
+    font-size: 16px;
+    min-height: 100px;  /* Height for multiple select */
+}
+
+/* Dark mode select styling */
+.dark-mode .contact-form select[multiple] {
+    border-color: #F5E6C4;
+    background-color: #444;
+    color: #F5E6C4;
+}
+
+/* Option styling */
+.contact-form select[multiple] option {
+    padding: 8px;
+    margin: 2px 0;
+}
+
+/* Selected option styling */
+.contact-form select[multiple] option:checked {
+    background-color: #000080;
+    color: #F5E6C4;
+}
+
+/* Dark mode selected option */
+.dark-mode .contact-form select[multiple] option:checked {
+    background-color: #F5E6C4;
+    color: #333;
+}
