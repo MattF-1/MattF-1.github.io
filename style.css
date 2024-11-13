@@ -1231,3 +1231,95 @@ li {
         font-size: 16px;
     }
 }
+
+/* Centered resume button styling */
+.centered-resume-container {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 32px;
+    background-color: #000080;
+    color: #F5E6C4;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.resume-btn:hover {
+    background-color: #0000b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+.download-icon {
+    font-size: 24px;
+}
+
+/* Dark mode styles */
+.dark-mode .resume-btn {
+    background-color: #F5E6C4;
+    color: #000000;
+}
+
+.dark-mode .resume-btn:hover {
+    background-color: #FFFFFF;
+}
+
+/* Tooltip styles */
+.resume-btn {
+    position: relative;
+}
+
+.resume-btn::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: #333;
+    color: #F5E6C4;
+    font-size: 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.resume-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover::before,
+.resume-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .resume-btn {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+}
