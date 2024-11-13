@@ -70,4 +70,22 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       });
   }
+
+  // Add submit form handling
+  const contactForm = document.querySelector('.contact-form');
+  
+  if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent default form submission
+          
+          // Show success message
+          alert("Your Information has been sent! Please allow 1-5 days to respond");
+          
+          // Reset the form
+          contactForm.reset();
+          
+          // Optional: Scroll back to top of form
+          contactForm.scrollIntoView({ behavior: 'smooth' });
+      });
+  }
 });

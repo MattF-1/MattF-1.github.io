@@ -22,85 +22,35 @@
 
 
     <form class="contact-form">
-<h>
-    Contact Information:
-</h>
-    <p>
-        Please enter First Name: <input id="First Name" type="text" value=""> 
-    </p>
-    <p>
-        Please enter Last Name: <input type="Last Name" value="">
-    </p>
-    <p>
-        Please enter Phone Number: <input id="First Name" type="text" value=""> 
-    </p>
-    <br>
-    <h>
-        Gender: 
-    </h>
-    <p>
-        
-    <input type="radio" value="A" name="choice"> Male
-    <input type="radio" value="B" name="choice" > Female
-    <input type="radio" value="C" name="choice" > Other
-    </p>
-    <h>
-        Availability: 
-    </h>
-    <p>
-       
-        <input type="checkbox"> Morning (09:00 am - 12:00 pm)
-        <input type="checkbox"> Afternoon (12:00 pm - 06:00 pm)
-        <input type="checkbox"> Evening (06:00 pm - 10:00 pm)
-    </p>
+        <div class="form-group">
+            <label for="firstName" class="required-field">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
 
-    <h>
-        Contact Preference: 
-    </h>
-    <p>
-        
-    <input type="radio" value="D" name="choice"> Cell
-    <input type="radio" value="E" name="choice" > Email
-    <input type="radio" value="F" name="choice" > Both
-    </p>
-    
-    <label for="cars">What field are you working/ studying in :</label>
-    <select id="cars" name="cars" size="4" multiple>
-      <option value="Buisiness">Buisiness</option>
-      <option value="IT">IT</option>
-      <option value="Medical">Medical</option>
-      <option value="Contractor">Contractor</option>
-    </select>
-    <br>
-    <br>
-    <h>
-        Reason for Contact: 
-    </h>
+        <div class="form-group">
+            <label for="lastName" class="required-field">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
 
-    <p> Reason for Contact
-        <select name="Networking">
-        <option value="Job Opportunity">Job Opportunity</option>
-        <option value="Entertainment">Entertainment</option>
-        <option value="Other">Other</option>
-        </select>
-    </p>
-        <br>
-        <h>
-            Other: 
-        </h>
-        <p>
-        Send A Message       
-        <br>
-        <br> 
-        <textarea name="message" rows="10" cols="30">
-        
-        </textarea>
-     </p>
+        <div class="form-group">
+            <label for="email" class="required-field">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
 
-     <div class="button-group">
-        <button type="reset" id="resetBtn" class="reset-btn">Reset Form</button>
-        <button type="submit">Send Message</button>
-    </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="message" class="required-field">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <div class="button-group">
+            <button type="reset" id="resetBtn" class="reset-btn">Reset Form</button>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </div>
     </form>
     </div>
     </div>

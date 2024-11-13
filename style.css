@@ -336,17 +336,35 @@ footer {
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 3px solid #000080;  /* Wider dark blue border */
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
+    border: 3px solid #000080;
     border-radius: 6px;
-    background-color: #F5E6C4;  /* Cream background */
-    color: #000080;  /* Dark blue text */
+    background-color: #F5E6C4;
+    color: #000080;
     font-size: 16px;
-    box-sizing: border-box;  /* Ensures padding doesn't affect width */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-/* Dark mode form styles - updated to include all input types */
+/* Textarea specific styling */
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Label styling */
+.contact-form label {
+    display: block;
+    color: #000080;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark mode styles */
 .dark-mode .contact-form input[type="text"],
 .dark-mode .contact-form input[type="email"],
 .dark-mode .contact-form input[type="tel"],
@@ -356,23 +374,25 @@ footer {
 .dark-mode .contact-form input[type="url"],
 .dark-mode .contact-form select,
 .dark-mode .contact-form textarea {
-    border-color: #F5E6C4;  /* Cream border */
-    background-color: #444;  /* Slightly lighter than dark mode background */
-    color: #F5E6C4;  /* Cream text */
+    border-color: #F5E6C4;
+    background-color: #444;
+    color: #F5E6C4;
 }
 
-/* Focus states for all form elements */
+/* Focus states */
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
     box-shadow: 0 0 5px #000080;
+    border-color: #0000b3;
 }
 
 .dark-mode .contact-form input:focus,
 .dark-mode .contact-form select:focus,
 .dark-mode .contact-form textarea:focus {
     box-shadow: 0 0 5px #F5E6C4;
+    border-color: #fff;
 }
 
 /* Form container styling */
@@ -403,18 +423,35 @@ footer {
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
     border: 3px solid #000080;
     border-radius: 6px;
     background-color: #F5E6C4;
     color: #000080;
     font-size: 16px;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
-    transition: all 0.3s ease;  /* Smooth transition for all properties */
+    transition: all 0.3s ease;
 }
 
-/* Dark mode form inputs */
+/* Textarea specific styling */
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Label styling */
+.contact-form label {
+    display: block;
+    color: #000080;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark mode styles */
 .dark-mode .contact-form input[type="text"],
 .dark-mode .contact-form input[type="email"],
 .dark-mode .contact-form input[type="tel"],
@@ -429,71 +466,258 @@ footer {
     color: #F5E6C4;
 }
 
-/* Form labels */
+/* Focus states */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #000080;
+    border-color: #0000b3;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form select:focus,
+.dark-mode .contact-form textarea:focus {
+    box-shadow: 0 0 5px #F5E6C4;
+    border-color: #fff;
+}
+
+/* Form container styling */
+.contact-form {
+    background-color: #fff;  /* Slightly lighter than the main cream background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    transition: background-color 0.3s ease;  /* Smooth transition for background */
+}
+
+/* Dark mode form container */
+.dark-mode .contact-form {
+    background-color: #222;  /* Slightly darker than the main dark mode background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form inputs styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="password"],
+.contact-form input[type="number"],
+.contact-form input[type="search"],
+.contact-form input[type="url"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
+    border: 3px solid #000080;
+    border-radius: 6px;
+    background-color: #F5E6C4;
+    color: #000080;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Textarea specific styling */
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Label styling */
 .contact-form label {
+    display: block;
     color: #000080;
     font-weight: bold;
-    display: block;
-    margin-top: 15px;
-    transition: color 0.3s ease;
-}
-
-/* Dark mode form labels */
-.dark-mode .contact-form label {
-    color: #F5E6C4;
-}
-
-/* Submit button */
-.contact-form button[type="submit"] {
-    background-color: #000080;
-    color: #F5E6C4;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Reset button styling */
-.reset-btn {
-    background-color: #cc0000;  /* Red color for warning */
-    color: #F5E6C4;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
 }
 
-.reset-btn:hover {
-    background-color: #ff0000;
-}
-
-/* Dark mode reset button */
-.dark-mode .reset-btn {
-    background-color: #8b0000;
+/* Dark mode styles */
+.dark-mode .contact-form input[type="text"],
+.dark-mode .contact-form input[type="email"],
+.dark-mode .contact-form input[type="tel"],
+.dark-mode .contact-form input[type="password"],
+.dark-mode .contact-form input[type="number"],
+.dark-mode .contact-form input[type="search"],
+.dark-mode .contact-form input[type="url"],
+.dark-mode .contact-form select,
+.dark-mode .contact-form textarea {
+    border-color: #F5E6C4;
+    background-color: #444;
     color: #F5E6C4;
 }
 
-.dark-mode .reset-btn:hover {
-    background-color: #cc0000;
+/* Focus states */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #000080;
+    border-color: #0000b3;
 }
 
-/* Adjust the button layout */
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form select:focus,
+.dark-mode .contact-form textarea:focus {
+    box-shadow: 0 0 5px #F5E6C4;
+    border-color: #fff;
+}
+
+/* Form container styling */
 .contact-form {
-    /* ... existing styles ... */
+    background-color: #fff;  /* Slightly lighter than the main cream background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    transition: background-color 0.3s ease;  /* Smooth transition for background */
 }
 
-/* Add this to create a button container */
-.contact-form .button-group {
+/* Dark mode form container */
+.dark-mode .contact-form {
+    background-color: #222;  /* Slightly darker than the main dark mode background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form inputs styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="password"],
+.contact-form input[type="number"],
+.contact-form input[type="search"],
+.contact-form input[type="url"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
+    border: 3px solid #000080;
+    border-radius: 6px;
+    background-color: #F5E6C4;
+    color: #000080;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Textarea specific styling */
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Label styling */
+.contact-form label {
+    display: block;
+    color: #000080;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark mode styles */
+.dark-mode .contact-form input[type="text"],
+.dark-mode .contact-form input[type="email"],
+.dark-mode .contact-form input[type="tel"],
+.dark-mode .contact-form input[type="password"],
+.dark-mode .contact-form input[type="number"],
+.dark-mode .contact-form input[type="search"],
+.dark-mode .contact-form input[type="url"],
+.dark-mode .contact-form select,
+.dark-mode .contact-form textarea {
+    border-color: #F5E6C4;
+    background-color: #444;
+    color: #F5E6C4;
+}
+
+/* Focus states */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #000080;
+    border-color: #0000b3;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form select:focus,
+.dark-mode .contact-form textarea:focus {
+    box-shadow: 0 0 5px #F5E6C4;
+    border-color: #fff;
+}
+
+/* Form container styling */
+.contact-form {
+    background-color: #fff;  /* Slightly lighter than the main cream background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    transition: background-color 0.3s ease;  /* Smooth transition for background */
+}
+
+/* Dark mode form container */
+.dark-mode .contact-form {
+    background-color: #222;  /* Slightly darker than the main dark mode background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form inputs styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="password"],
+.contact-form input[type="number"],
+.contact-form input[type="search"],
+.contact-form input[type="url"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
+    border: 3px solid #000080;
+    border-radius: 6px;
+    background-color: #F5E6C4;
+    color: #000080;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Textarea specific styling */
+.submit-btn:hover {
+    background-color: #3cb371;  /* Lighter green on hover */
+}
+
+/* Dark mode submit button */
+.dark-mode .submit-btn {
+    background-color: #2e8b57;
+    color: #F5E6C4;
+}
+
+.dark-mode .submit-btn:hover {
+    background-color: #3cb371;
+}
+
+/* Button group styling */
+.button-group {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+}
+
+.reset-btn {
+    flex: 0.5;  /* Makes the reset button slightly smaller */
 }
