@@ -1411,3 +1411,43 @@ li {
         padding: 10px;
     }
 }
+
+.navbar {
+    text-align: center;
+    background-color: #000080;
+    padding: 15px 0;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #F5E6C4;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Dark mode navbar */
+.dark-mode .navbar {
+    background-color: #000000;
+}
+
+.dark-mode .navbar a {
+    color: #FFFFFF;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        font-size: 20px;
+        padding: 8px 15px;
+        margin: 0 5px;
+    }
+}
