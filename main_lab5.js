@@ -152,3 +152,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Add these functions for the photo gallery
+function enlargeImage(img) {
+    const modal = document.getElementById('imageModal');
+    const enlargedImg = document.getElementById('enlargedImg');
+    const modalCaption = document.getElementById('modalCaption');
+    
+    modal.style.display = 'block';
+    enlargedImg.src = img.src;
+    modalCaption.innerHTML = img.nextElementSibling.innerHTML;
+}
+
+function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+}
+
+// Close modal when clicking outside the image
+window.onclick = function(event) {
+    const modal = document.getElementById('imageModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+

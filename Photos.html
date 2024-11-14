@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Luca Lotito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Education.html">Education</a>
+        <a href="Work_History.html">Work History</a>
+        <a href="Photos.html">Photos</a>
+        <a href="Contact_us.html">Contact</a>
+    </div>
+
+    <!-- Control Buttons -->
+    <button id="darkModeBtn" class="dark-mode-btn" onclick="toggleDarkMode()">
+        🌙 Dark Mode
+    </button>
+    
+    <button id="fontSizeBtn" class="font-size-btn" onclick="toggleFontSize()">
+        <span class="size-icon">Aa</span>
+        Increase Text Size
+    </button>
+
+    <!-- Main Content -->
+    <h1>Photo Gallery</h1>
+
+    <!-- Photo Grid Container -->
+    <div class="photo-grid">
+        <!-- Add your images here. Example: -->
+        <div class="photo-item">
+            <img src="Me_Iceland.jpg" alt="Iceland Photo" onclick="enlargeImage(this)">
+            <p>Iceland 2023</p>
+        </div>
+        <!-- Add more photo-items as needed -->
+    </div>
+
+    <!-- Enlarged Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="enlargedImg" src="" alt="Enlarged photo">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Luca Lotito</p>
+    </footer>
+
+    <script src="main_lab5.js"></script>
+</body>
+</html> 
