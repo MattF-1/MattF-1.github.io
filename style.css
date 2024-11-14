@@ -1450,3 +1450,35 @@ li {
         margin: 0 5px;
     }
 }
+
+/* Updated footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid #000080;  /* Add a border line */
+}
+
+footer p {
+    font-size: 20px;  /* Increased font size */
+    font-weight: bold;  /* Made text bold */
+    color: #000080;  /* Match your theme color */
+    margin: 0;
+    letter-spacing: 1px;  /* Add slight letter spacing */
+}
+
+/* Dark mode footer styles */
+.dark-mode footer {
+    border-top-color: #F5E6C4;  /* Change border color in dark mode */
+}
+
+.dark-mode footer p {
+    color: #F5E6C4;  /* Match dark mode text color */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    footer p {
+        font-size: 18px;  /* Slightly smaller on mobile */
+    }
+}
