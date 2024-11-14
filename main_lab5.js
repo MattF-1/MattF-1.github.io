@@ -181,6 +181,15 @@ document.addEventListener('keydown', function(event) {
 function showPhotoInfo(button) {
     const modal = document.getElementById('infoModal');
     const infoText = document.getElementById('photoInfoText');
+    const infoTitle = document.querySelector('.info-modal h3');
+    
+    // Check if it's a video info button
+    if (button.classList.contains('video-info-btn')) {
+        infoTitle.textContent = 'Video Information';
+    } else {
+        infoTitle.textContent = 'Photo Information';
+    }
+    
     infoText.textContent = button.getAttribute('data-info');
     modal.style.display = 'block';
 }
