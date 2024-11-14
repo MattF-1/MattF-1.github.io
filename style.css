@@ -1353,11 +1353,6 @@ li {
     transform: translateY(-5px);
 }
 
-.photo-item p {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
 /* Modal styles */
 .modal {
     display: none;
@@ -1368,9 +1363,10 @@ li {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1001;
+    cursor: pointer;
 }
 
-.modal img {
+#enlargedImg {
     max-width: 90%;
     max-height: 90vh;
     margin: auto;
@@ -1378,6 +1374,7 @@ li {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    cursor: default;
 }
 
 .close-modal {
@@ -1388,6 +1385,7 @@ li {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 1002;
 }
 
 #modalCaption {
@@ -1397,6 +1395,7 @@ li {
     position: fixed;
     bottom: 20px;
     width: 100%;
+    font-size: 18px;
 }
 
 /* Dark mode adjustments */

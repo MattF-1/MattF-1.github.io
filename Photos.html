@@ -31,26 +31,23 @@
 
     <!-- Photo Grid Container -->
     <div class="photo-grid">
-        <!-- Add your images here. Example: -->
         <div class="photo-item">
-            <img src="Me_Iceland.jpg" alt="Professional Photo" onclick="enlargeImage(this)">
-            <p>Iceland March 2024</p>
+            <img src="Me_Iceland.jpg" alt="Iceland Photo" class="gallery-img" onclick="enlargeImage(this)">
+            <p>Iceland 2023</p>
         </div>
-        <!-- Add more photo-items as needed -->
-        <div class="photo-item">
-            <img src="IMG_5728.jpeg" alt="Me In Paris For the Olympics" onclick="enlargeImage(this)">
-            <p>Paris For the Olympics June 2024</p>
+        <!-- Add more photos as needed -->
+    </div>
 
     <!-- Enlarged Image Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
         <img id="enlargedImg" src="" alt="Enlarged photo">
         <div id="modalCaption"></div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Matthew Fernandes</p>
+        <p>© 2024 Luca Lotito</p>
     </footer>
 
     <script src="main_lab5.js"></script>

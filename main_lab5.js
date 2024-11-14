@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Add these functions for the photo gallery
+// Photo gallery functions
 function enlargeImage(img) {
     const modal = document.getElementById('imageModal');
     const enlargedImg = document.getElementById('enlargedImg');
@@ -160,18 +160,20 @@ function enlargeImage(img) {
     
     modal.style.display = 'block';
     enlargedImg.src = img.src;
-    modalCaption.innerHTML = img.nextElementSibling.innerHTML;
+    modalCaption.textContent = img.nextElementSibling.textContent;
 }
 
 function closeModal() {
-    document.getElementById('imageModal').style.display = 'none';
-}
-
-// Close modal when clicking outside the image
-window.onclick = function(event) {
     const modal = document.getElementById('imageModal');
-    if (event.target == modal) {
+    if (event.target !== document.getElementById('enlargedImg')) {
         modal.style.display = 'none';
     }
 }
+
+// Close modal when pressing Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+});
 
