@@ -1523,3 +1523,105 @@ footer p {
         font-size: 18px;
     }
 }
+
+/* Photo controls and info button styles */
+.photo-controls {
+    position: relative;
+    display: inline-block;
+}
+
+.info-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 128, 0.8);  /* Semi-transparent dark blue */
+    color: #F5E6C4;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.info-btn:hover {
+    background-color: rgba(0, 0, 128, 1);  /* Solid dark blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Info Modal styles */
+.info-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1002;
+}
+
+.info-modal-content {
+    position: relative;
+    background-color: #F5E6C4;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-info-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000080;
+}
+
+.info-modal h3 {
+    color: #000080;
+    margin-top: 0;
+}
+
+.info-modal p {
+    color: #000080;
+    line-height: 1.6;
+}
+
+/* Dark mode styles */
+.dark-mode .info-btn {
+    background-color: rgba(245, 230, 196, 0.8);
+    color: #000000;
+}
+
+.dark-mode .info-btn:hover {
+    background-color: rgba(245, 230, 196, 1);
+}
+
+.dark-mode .info-modal-content {
+    background-color: #333;
+}
+
+.dark-mode .info-modal h3,
+.dark-mode .info-modal p,
+.dark-mode .close-info-modal {
+    color: #F5E6C4;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .info-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .info-modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
+}

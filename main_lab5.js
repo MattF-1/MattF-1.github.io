@@ -177,3 +177,30 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// Add these functions for photo information
+function showPhotoInfo(button) {
+    const modal = document.getElementById('infoModal');
+    const infoText = document.getElementById('photoInfoText');
+    infoText.textContent = button.getAttribute('data-info');
+    modal.style.display = 'block';
+}
+
+function closeInfoModal() {
+    document.getElementById('infoModal').style.display = 'none';
+}
+
+// Close info modal when clicking outside
+window.onclick = function(event) {
+    const infoModal = document.getElementById('infoModal');
+    if (event.target == infoModal) {
+        infoModal.style.display = 'none';
+    }
+}
+
+// Close info modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        document.getElementById('infoModal').style.display = 'none';
+    }
+});
+

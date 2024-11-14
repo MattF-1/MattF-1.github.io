@@ -32,10 +32,15 @@
     <!-- Photo Grid Container -->
     <div class="photo-grid">
         <div class="photo-item">
-            <img src="IMG_2099_Original.jpeg" alt="Iceland Photo" class="gallery-img" onclick="enlargeImage(this)">
-            <p>Iceland March 2024</p>
+            <div class="photo-controls">
+                <img src="Me_Iceland.jpg" alt="Iceland Photo" class="gallery-img" onclick="enlargeImage(this)">
+                <button class="info-btn" onclick="showPhotoInfo(this)" data-info="This photo was taken in Iceland during my exchange semester in Fall 2023. Location: Blue Lagoon, Iceland. The Blue Lagoon is a geothermal spa located in southwestern Iceland.">
+                    ℹ️ Photo Info
+                </button>
+            </div>
+            <p>Iceland 2023</p>
         </div>
-        <!-- Add more photos as needed -->
+        <!-- Add more photos with their info buttons as needed -->
     </div>
 
     <!-- Enlarged Image Modal -->
@@ -43,6 +48,15 @@
         <span class="close-modal">&times;</span>
         <img id="enlargedImg" src="" alt="Enlarged photo">
         <div id="modalCaption"></div>
+    </div>
+
+    <!-- Add this modal for photo information -->
+    <div id="infoModal" class="info-modal">
+        <div class="info-modal-content">
+            <span class="close-info-modal" onclick="closeInfoModal()">&times;</span>
+            <h3>Photo Information</h3>
+            <p id="photoInfoText"></p>
+        </div>
     </div>
 
     <!-- Footer -->
